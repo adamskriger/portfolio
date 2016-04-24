@@ -10,7 +10,7 @@ const PATHS = {
   build: path.join(__dirname, 'build')
 };
 
-process.env.BABEL_ENV = TARGET; 
+process.env.BABEL_ENV = TARGET;
 
 const common = {
   entry: {
@@ -37,7 +37,7 @@ const common = {
       },
       //set up JSX. This accepts js too thanks to RegExp
       {
-      test: /\.jsx$/,
+      test: /\.(js|jsx)$/,
       //enable caching for improved performance during development
       //It uses default OS directory by default. If you need something more custom,
       //pass a path to it. ie: babel?cacheDirectory=<path>
