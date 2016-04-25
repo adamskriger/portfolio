@@ -1,8 +1,7 @@
 import AltContainer from 'alt-container';
 import React from 'react';
-import Lanes from './Lanes.jsx';
-import LaneActions from '../actions/LaneActions';
-import LaneStore from '../stores/LaneStore';
+import BButton from './BButton.jsx';
+
 
 
 
@@ -15,12 +14,8 @@ export default class App extends React.Component {
       <div>
         <button className="add-lane" onClick={this.addLane}>+</button>
 
-        <AltContainer
-        stores={[LaneStore]}
-        inject = {{
-          lanes: () => LaneStore.getState().lanes || []
-        }}>
-        <Lanes />
+        <AltContainer>
+        <BButton />
         </AltContainer>
 
       </div>
@@ -28,8 +23,4 @@ export default class App extends React.Component {
     );
   }
 
-
-  addLane() {
-    LaneActions.create({name: 'New lane'});
-  }
 }
