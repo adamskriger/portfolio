@@ -24,12 +24,12 @@ body {
 }
 
 .navbar {
-  background-color: #003366;
-  color: white;
+  background-color: black;
+  opacity: .8;
 }
 
-button {
-  color: blue;
+.navbar-default .navbar-nav>li>a {
+  color: white;
 }
 .add-note {
   background-color: #fdfdfd;
