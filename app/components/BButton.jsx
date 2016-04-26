@@ -8,9 +8,9 @@ export default class BButton extends React.Component {
   render() {
 
     return (
-      <button bsSize="large">Large button</button>
-
-
+      <div>
+      <button className="" bsSize="small">Hello</button>
+      </div>
     );
   }
 }

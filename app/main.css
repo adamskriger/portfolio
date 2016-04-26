@@ -3,6 +3,9 @@ body {
   font-family: sans-serif;
 }
 
+button {
+  color: blue;
+}
 .add-note {
   background-color: #fdfdfd;
   border: 1px solid #ccc;

@@ -12,11 +12,9 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <button className="add-lane" onClick={this.addLane}>+</button>
 
-        <AltContainer>
-        <BButton />
-        </AltContainer>
+        <BButton bsStyle="primary" />
+
 
       </div>
 
