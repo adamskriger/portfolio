@@ -3,6 +3,11 @@ body {
   font-family: sans-serif;
 }
 
+.navbar {
+  background-color: #003366;
+  color: white;
+}
+
 button {
   color: blue;
 }
