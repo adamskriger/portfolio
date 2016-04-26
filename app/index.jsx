@@ -10,7 +10,7 @@ import storage from './libs/storage';
 import persist from './libs/persist';
 const logger = require('morgan');
 persist(alt, storage, 'app');
-
+var bs = require('bootstrap'); 
 
 ReactDOM.render(<Router history={browserHistory} routes={routes} />
 
