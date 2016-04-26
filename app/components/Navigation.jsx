@@ -2,7 +2,7 @@ import AltContainer from 'alt-container';
 import React from 'react';
 import { Link } from 'react-router';
 
-export default class App extends React.Component {
+export default class Navigation extends React.Component {
 
 
   render() {
