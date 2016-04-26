@@ -3,6 +3,26 @@ body {
   font-family: sans-serif;
 }
 
+.splashimage {
+  background-image: url('https://s3.amazonaws.com/accupuncture/radiance.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+}
+
+.splashbox {
+  font-weight:100;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding-top: 5rem;
+  padding: 2rem;
+  width: 40%;
+  margin:2rem;
+  font-size: 3.2rem;
+  list-style: none;
+}
+
 .navbar {
   background-color: #003366;
   color: white;

@@ -24,7 +24,9 @@ export default class Navigation extends React.Component {
 
     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul className="nav navbar-nav">
-        <li className="active"><a href="#">About Us <span className="sr-only">(current)</span></a></li>
+        <li className=""><Link to="">
+            About Us
+          </Link></li>
         <li><a href="#">Our Promise</a></li>
         <li className="dropdown">
           <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conditions We Treat <span className=""></span></a>
