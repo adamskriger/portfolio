@@ -10,7 +10,7 @@ export default class Splash extends React.Component {
     return (
       <div className="splashimage">
 
-        <div className="splashbox">We view each patient as an individual whose wellbeing is affected by lifestyle, emotions, attitude and environment</div>
+        <div className="splashbox">We view each patient as an individual whose wellbeing is affected by lifestyle, emotions, attitude and environment.</div>
 
       </div>
     );
