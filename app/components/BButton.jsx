@@ -1,5 +1,5 @@
 import React from 'react';
-var ReactBootstrap = require('react-bootstrap');
+import { Link } from 'react-router';
 
 
 export default class BButton extends React.Component {
@@ -9,7 +9,6 @@ export default class BButton extends React.Component {
 
     return (
       <div>
-      <button className="" bsSize="small">Hello</button>
       </div>
     );
   }

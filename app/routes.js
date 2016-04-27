@@ -1,16 +1,17 @@
-import App from './components/App.jsx'
 import React from 'react';
-import About from './components/About'
+import {Router, Route, IndexRoute, browserHistory, routes} from 'react-router';
+import App from './components/App.jsx'
+import About from './components/About.jsx'
+import ReactDOM from 'react-dom';
+import PostsIndex from 'PostsIndex.jsx'
 
-import {Router, Route, IndexRoute} from 'react-router';
 
 
 
 export default (
-<Router>
-<Route path="/" component={App}>
-</Route>
-<Route path="/about" component={About} />
-</Router>
+  <Route path="/" component={App}>
+    <IndexRoute component={PostsIndex} />
+    <Route path = "about" component={About} />
 
-);
+  </Route>
+  );
