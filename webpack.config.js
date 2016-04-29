@@ -63,7 +63,7 @@ if(TARGET === 'start' || !TARGET){
       //enable history API fallback so HTML5 HISTORY API based
       // routing works. This is a good default that will come in handy in more
       // complicated setups.
-      historyAPIFallback: true,
+      historyApiFallback: true,
       hot: true,
       inline: true,
       progress: true,

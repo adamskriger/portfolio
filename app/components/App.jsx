@@ -4,7 +4,9 @@ import BButton from './BButton.jsx';
 import Navigation from './Navigation.jsx';
 import Splash from './Splash.jsx'
 import About from './About.jsx'
-
+//firebase
+import Firebase from 'firebase';
+import ReactFire from 'reactfire';
 
 
 export default class App extends React.Component {
