@@ -57,10 +57,7 @@ export default class Blogger extends React.Component {
           type="text"
           className="form-control"/>
           <span className="input-group-btn">
-            <button onClick={this.handleClick}
-            className="btn btn-default" type="button">
-              Add Title
-            </button>
+          
           </span>
           {this.state.title}
         </div>
