@@ -10,24 +10,30 @@ export default class Blogger extends React.Component {
 
     this.firebaseRef = new Firebase(rootURL + 'items/');
 
-    this.state = {text: ''};
-
+    this.state = {
+      title: '',
+      text: ''
+  };
   }
 
   handleInputChange = () => {
 
-    this.setState({text: this.refs.input.value});
+    this.setState({
+      title: this.refs.title.value,
+      text: this.refs.text.value});
   }
 
 
   handleClick = () => {
 
     this.firebaseRef.push({
+      title: this.state.title,
       text: this.state.text,
       done: false
     })
-    //send value of input field to Firebase
-    this.setState({text: ''});
+    this.setState({title: '',
+                   text: ''
+                  });
   }
 
 
@@ -42,9 +48,27 @@ export default class Blogger extends React.Component {
           </div>
         </div>
 
+//title
         <div className="input-group">
           <input
-          ref="input"
+          ref="title"
+          value={this.state.title}
+          onChange = {this.handleInputChange}
+          type="text"
+          className="form-control"/>
+          <span className="input-group-btn">
+            <button onClick={this.handleClick}
+            className="btn btn-default" type="button">
+              Add Title
+            </button>
+          </span>
+          {this.state.title}
+        </div>
+
+//text
+        <div className="input-group">
+          <input
+          ref="text"
           value={this.state.text}
           onChange = {this.handleInputChange}
           type="text"
@@ -52,7 +76,7 @@ export default class Blogger extends React.Component {
           <span className="input-group-btn">
             <button onClick={this.handleClick}
             className="btn btn-default" type="button">
-              Add
+              Add Blog Entry
             </button>
           </span>
           {this.state.text}
