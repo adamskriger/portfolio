@@ -3,6 +3,9 @@ body {
   font-family: sans-serif;
 }
 
+.blog-submit {
+  display: inline-block;
+}
 .splashimage {
   background-image: url('https://s3.amazonaws.com/accupuncture/radiance.jpg');
   background-size: cover;

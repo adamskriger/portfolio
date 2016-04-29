@@ -43,12 +43,12 @@ export default class Blogger extends React.Component {
         <div className="row panel panel-default">
           <div className="col-md-8 col-md-offset-2">
             <h2>
-                Blog List
+                Create a New Blog Post
             </h2>
           </div>
         </div>
 
-//title
+<h2>Blog Title</h2>
         <div className="input-group">
           <input
           ref="title"
@@ -57,26 +57,26 @@ export default class Blogger extends React.Component {
           type="text"
           className="form-control"/>
           <span className="input-group-btn">
-          
+
           </span>
-          {this.state.title}
         </div>
 
-//text
+<h2>Blog Entry</h2>
         <div className="input-group">
-          <input
+          <textarea
           ref="text"
           value={this.state.text}
           onChange = {this.handleInputChange}
           type="text"
           className="form-control"/>
-          <span className="input-group-btn">
-            <button onClick={this.handleClick}
-            className="btn btn-default" type="button">
-              Add Blog Entry
-            </button>
-          </span>
-          {this.state.text}
+
+        </div>
+
+        <div className="blog-submit input-group-btn">
+          <button onClick={this.handleClick}
+          className="btn btn-default" type="button">
+            Publish Blog Post
+          </button>
         </div>
     </div>
     );
