@@ -3,6 +3,9 @@ import React from 'react';
 import { Link } from 'react-router';
 import List from './List.jsx'
 import Firebase from 'firebase'
+import BlogStore from '../stores/BlogStore'
+import BlogActions from '../actions/BlogActions';
+
 
 const rootURL = 'https://incandescent-fire-6143.firebaseio.com/';
 
@@ -10,37 +13,37 @@ const rootURL = 'https://incandescent-fire-6143.firebaseio.com/';
 export default class Blogger extends React.Component {
   constructor(props) {
     super(props);
+    BlogStore.getState();
+    };
 
-
-    this.state = {
-      blog: {},
-      title: '',
-      text: ''
-  };
-
-
-
-  }
 
   componentDidMount() {
+    BlogStore.listen((state) => {
+      this.setState(state)
+    })
     this.firebaseRef = new Firebase(rootURL + 'items/');
-    this.firebaseRef.on('value', (snapshot) => {
-      this.setState({
-        blog: snapshot.val()
-      })
-  });
+
   }
+
+  componentWillMount() {
+    BlogStore.unlisten((state) => {
+      this.setState(state)
+    })
+  }
+
+
+
 
   renderList = (key) => {
       return (
-      <Link to={`blogger/${key}`}> <List key={key} blog={this.state.blog[key]} /> </Link>
+      <Link to={`blogshow/${key}`}> <List key={key} blog={this.state.blog[key]} /> </Link>
       )
     }
 
 
   handleInputChange = () => {
 
-    this.setState({
+    BlogStore.setState({
       title: this.refs.title.value,
       text: this.refs.text.value});
   }
@@ -48,17 +51,7 @@ export default class Blogger extends React.Component {
 
   handleClick = () => {
 
-    this.firebaseRef.push({
-      title: this.state.title,
-      text: this.state.text,
-      done: false
-    })
-
-
-
-    this.setState({title: '',
-                   text: ''
-                  });
+    BlogStore.handleClick();
   }
 
 
@@ -77,7 +70,7 @@ export default class Blogger extends React.Component {
         <div className="input-group">
           <input
           ref="title"
-          value={this.state.title}
+          value={BlogStore.state.title}
           onChange = {this.handleInputChange}
           type="text"
           className="form-control"/>
@@ -90,7 +83,7 @@ export default class Blogger extends React.Component {
         <div className="input-group">
           <textarea
           ref="text"
-          value={this.state.text}
+          value={BlogStore.state.text}
           onChange = {this.handleInputChange}
           type="text"
           className="form-control"/>
@@ -106,12 +99,13 @@ export default class Blogger extends React.Component {
 
         {/*<List blog={this.state.blog} />*/}
 
-        {Object.keys(this.state.blog)
+        {Object.keys(BlogStore.state.blog)
        .map(this.renderList)}
 
 
 
     </div>
+
 
 
     );

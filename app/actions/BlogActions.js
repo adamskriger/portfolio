@@ -1,3 +1,3 @@
 import alt from '../libs/alt';
 
-export default alt.generateActions('read');
+export default alt.generateActions('read', 'mountFirebase', 'handleClick');

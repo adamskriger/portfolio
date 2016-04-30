@@ -14,7 +14,7 @@ export default (
 </Route>
 <Route path="/about" component={About} />
 <Route path="/blogger" component={Blogger} />
-<Route path="blogger/:key" component={BlogShow} />
+<Route path="blogshow/:key" component={BlogShow} />
 </Router>
 
 );
