@@ -7,16 +7,14 @@ export default class List extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props.title);
   }
 
 
   render() {
     return (
             <div>
-                 Object.keys(this.props.title[key]).map(key) =>
-                     <li>{this.props.title}</li>
-                     )
+                     <li>{this.props.blog.title}</li>
+
 
              </div>
 
