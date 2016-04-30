@@ -10,7 +10,8 @@ class BlogStore {
 
     this.exportPublicMethods({
       handleClick: this.handleClick,
-      setState: this.setState
+      setState: this.setState,
+      mountFirebase: this.mountFirebase
 
     });
 
@@ -48,5 +49,8 @@ handleClick () {
                  text: ''
                 })
 }
+
+
+
 }
 export default alt.createStore(BlogStore, 'BlogStore');

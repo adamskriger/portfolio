@@ -14,6 +14,7 @@ export default class Blogger extends React.Component {
   constructor(props) {
     super(props);
     BlogStore.getState();
+    BlogStore.mountFirebase();
     };
 
 

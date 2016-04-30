@@ -4,23 +4,15 @@ import { Link } from 'react-router';
 import Blogger from './Blogger'
 import List from './List'
 const rootURL = 'https://incandescent-fire-6143.firebaseio.com/';
-import BlogStore from '../stores/BlogStore';
-import BlogActions from '../actions/BlogActions';
 
+import BlogStore from '../stores/BlogStore'
+import BlogActions from '../actions/BlogActions';
 
 
 
 export default class BlogShow extends React.Component {
   constructor(props) {
     super(props);
-
-    contextTypes: {
-    blog: React.PropTypes.object
-
-    }
-
-
-
 }
 
 
