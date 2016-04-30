@@ -11,23 +11,28 @@ export default class Blogger extends React.Component {
   constructor(props) {
     super(props);
 
-
-    this.firebaseRef = new Firebase(rootURL + 'items/');
-
-
-
+    // this.firebaseRef = new Firebase(rootURL + 'items/');
 
     this.state = {
+      blog: {},
       title: '',
-      text: ''
+      text: '',
   };
 
-    this.firebaseRef.on('value', function(snapshot) {
-      console.log(snapshot.val());
-  });
 
   }
 
+  componentDidMount () {
+    this.firebaseRef = new Firebase(rootURL + 'items/');
+    this.firebaseRef.on('value', (snapshot) => {
+      // console.log(snapshot.val());
+      // console.log(typeof snapshot.val());
+      this.setState({
+        blog: snapshot.val(),
+      });
+    });
+
+  }
 
 
   handleInputChange = () => {
@@ -46,15 +51,20 @@ export default class Blogger extends React.Component {
       done: false
     })
 
-
-
-    this.setState({title: '',
-                   text: ''
-                  });
+    //
+    // this.setState({title: '',
+    //                text: ''
+    //               });
   }
 
+  renderList = (key) => {
+    return (
+      <List key={key} blog={this.state.blog[key]} />
+    )
+  }
 
   render() {
+    // console.log(this.state.blog)
     return (
       <div>
         <div className="row panel panel-default">
@@ -96,10 +106,9 @@ export default class Blogger extends React.Component {
           </button>
         </div>
 
-        <List title={this.state.title} />
-
-        
-
+        {/*<List blog={this.state.blog} />*/}
+        {Object.keys(this.state.blog)
+          .map(this.renderList)}
 
     </div>
 
