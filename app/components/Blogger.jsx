@@ -1,20 +1,34 @@
 import AltContainer from 'alt-container';
 import React from 'react';
 import { Link } from 'react-router';
+import List from './List.jsx'
+import Firebase from 'firebase'
 
 const rootURL = 'https://incandescent-fire-6143.firebaseio.com/';
+
 
 export default class Blogger extends React.Component {
   constructor(props) {
     super(props);
 
+
     this.firebaseRef = new Firebase(rootURL + 'items/');
+
+
+
 
     this.state = {
       title: '',
       text: ''
   };
+
+    this.firebaseRef.on('value', function(snapshot) {
+      console.log(snapshot.val());
+  });
+
   }
+
+
 
   handleInputChange = () => {
 
@@ -31,6 +45,9 @@ export default class Blogger extends React.Component {
       text: this.state.text,
       done: false
     })
+
+
+
     this.setState({title: '',
                    text: ''
                   });
@@ -78,7 +95,15 @@ export default class Blogger extends React.Component {
             Publish Blog Post
           </button>
         </div>
+
+        <List title={this.state.title} />
+
+        
+
+
     </div>
+
+
     );
   }
 
