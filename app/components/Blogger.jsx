@@ -33,7 +33,7 @@ export default class Blogger extends React.Component {
 
   renderList = (key) => {
       return (
-        <List key={key} blog={this.state.blog[key]} />
+      <List key={key} blog={this.state.blog[key]} /> 
       )
     }
 
