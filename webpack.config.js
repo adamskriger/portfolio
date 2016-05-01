@@ -2,7 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
-const webpackdev = require('webpack-dev-server'); 
+const webpackdev = require('webpack-dev-server');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
@@ -98,6 +98,7 @@ plugins: [
 
 if(TARGET === 'build' || TARGET === 'stats') {
   module.exports = merge(common, {
+
     entry: {
       vendor: Object.keys(pkg.dependencies).filter(function(v) {
         return v !== 'alt-utils';
@@ -111,6 +112,9 @@ if(TARGET === 'build' || TARGET === 'stats') {
       chunkFilename: '[chunkhash].js'
     },
     module: {
+      resolveLoader: {
+  root: path.join(__dirname, 'node_modules')
+}, 
       loaders: [
         // Extract CSS during build
         {
