@@ -10,11 +10,14 @@ import BlogActions from '../actions/BlogActions';
 const rootURL = 'https://incandescent-fire-6143.firebaseio.com/';
 
 
+
 export default class Blogger extends React.Component {
   constructor(props) {
     super(props);
     BlogStore.getState();
     BlogStore.mountFirebase();
+    {console.log(this.props.location.query)}
+
     };
 
 
@@ -23,7 +26,6 @@ export default class Blogger extends React.Component {
       this.setState(state)
     })
     this.firebaseRef = new Firebase(rootURL + 'items/');
-
   }
 
   componentWillMount() {

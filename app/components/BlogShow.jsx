@@ -13,38 +13,35 @@ import BlogActions from '../actions/BlogActions';
 export default class BlogShow extends React.Component {
   constructor(props) {
     super(props);
+    {console.log(this.props.routeParams.key)}
+
 }
 
 
 
+
+filterList(key) {
+  if (this.props.routeParams.key===key){
+    return Blogstore.state.blog
+  }
+
+}
+
   render() {
 
-            <div>
-
-            <div >
-              </div>
-              <AltContainer
-                stores={[BlogStore]}
-                inject={{
-                  blog: () => BlogStore.getBlogByIds(BlogShow)
-                }}
-              >
-                <Blogger
-                   />
-              </AltContainer>
-
-
-
-             {Object.keys(this.context.blog)
-             .filter((key)=>{
-                     return key===this.props.params[key];
-                   })
-                   .map((key)=> this.context.blog[key])}
 
 
 
 
-             </div>
+
+
+
+             {Object.keys(BlogStore.state.blog).map(this.filterList)}
+
+
+
+
+
 
 
 
