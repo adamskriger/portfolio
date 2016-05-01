@@ -14,38 +14,22 @@ export default class BlogShow extends React.Component {
   constructor(props) {
     super(props);
     {console.log(this.props.routeParams.key)}
+    this.filterList = this.filterList.bind(this);
 
 }
-
 
 
 
 filterList(key) {
-  if (this.props.routeParams.key===key){
-    return Blogstore.state.blog
-  }
-
+  return this.props.routeParams.key === key;
 }
 
-  render() {
+mapList(key) {
+  return (<List key={key} blog={BlogStore.state.blog[key]} />);
+}
 
-
-
-
-
-
-
-
-             {Object.keys(BlogStore.state.blog).map(this.filterList)}
-
-
-
-
-
-
-
-
-
-  }
+render() {
+  return <div> {Object.keys(BlogStore.state.blog).filter(this.filterList).map(this.mapList)} </div>
+}
 
 }

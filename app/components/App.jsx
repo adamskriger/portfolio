@@ -3,6 +3,8 @@ import React from 'react';
 import Navigation from './Navigation.jsx';
 import Splash from './Splash.jsx'
 import About from './About.jsx'
+import BlogShow from './BlogShow.jsx'
+
 //firebase
 import Firebase from 'firebase';
 import ReactFire from 'reactfire';
