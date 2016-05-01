@@ -87,5 +87,34 @@ plugins: [
 }
 
 if(TARGET === 'build') {
-  module.exports = merge(common, {});
+  module.exports = merge(common, {
+    devtool: 'eval-source-map',
+    devServer: {
+      contentBase: PATHS.build,
+
+      //enable history API fallback so HTML5 HISTORY API based
+      // routing works. This is a good default that will come in handy in more
+      // complicated setups.
+      historyApiFallback: true,
+      hot: true,
+      inline: true,
+      progress: true,
+
+      //display only errors to reduce output amount
+      stats: 'errors only',
+
+      //Parse host and port from env so this is easy to customize
+      host: process.env.HOST,
+      port: process.env.PORT
+
+},
+
+plugins: [
+  new webpack.HotModuleReplacementPlugin(),
+  new NpmInstallPlugin({
+    save: true //--save
+  })
+]
+});
+});
 }
