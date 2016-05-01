@@ -7,7 +7,7 @@ const TARGET = process.env.npm_lifecycle_event;
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
-  build: path.join(__dirname, 'build')
+  build: 'webpack --config ./webpack.prod.config.js --progress --colors'
 };
 
 process.env.BABEL_ENV = TARGET;
