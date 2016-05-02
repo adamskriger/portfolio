@@ -19,6 +19,6 @@ app.use(bodyParser.json());
 app.use(express.static(path.join('app/build/index.html')));
 app.use(logger('dev'));
 /* Server Initialization */
-app.get('*', (req, res) => res.sendFile('build/index.html'));
+app.get('*', (req, res) => res.sendFile('app/build/index.html'));
 var port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server initialized on // ${new Date()}`));
