@@ -86,6 +86,47 @@ plugins: [
 });
 }
 
-if(TARGET === 'build') {
-  module.exports = merge(common, {});
+if(TARGET === 'build' || TARGET === 'stats') {
+  module.exports = merge(common, {
+    entry: {
+      vendor: Object.keys(pkg.dependencies).filter(function(v) {
+        return v !== 'alt-utils';
+      }),
+      style: PATHS.style
+    },
+    output: {
+      path: PATHS.build,
+      // Output using entry name
+      filename: '[name].[chunkhash].js',
+      chunkFilename: '[chunkhash].js'
+    },
+    module: {
+      loaders: [
+        // Extract CSS during build
+        {
+          test: /\.css$/,
+          loader: ExtractTextPlugin.extract('style', 'css'),
+          include: PATHS.app
+        }
+      ]
+    },
+    plugins: [
+      new CleanPlugin([PATHS.build]),
+      // Output extracted CSS to a file
+      new ExtractTextPlugin('[name].[chunkhash].css'),
+      // Extract vendor and manifest files
+      new webpack.optimize.CommonsChunkPlugin({
+        names: ['vendor', 'manifest']
+      }),
+      // Setting DefinePlugin affects React library size!
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': '"production"'
+      }),
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      })
+    ]
+  });
 }
