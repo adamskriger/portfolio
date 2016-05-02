@@ -112,9 +112,6 @@ if(TARGET === 'build' || TARGET === 'stats') {
       chunkFilename: '[chunkhash].js'
     },
     module: {
-      resolveLoader: {
-  root: path.join(__dirname, 'node_modules')
-}, 
       loaders: [
         // Extract CSS during build
         {
