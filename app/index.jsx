@@ -1,4 +1,4 @@
-import './main.css';
+import 'main.css';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes'
 
