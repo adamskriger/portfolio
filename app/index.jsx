@@ -8,11 +8,7 @@ import App from './components/App.jsx';
 import About from './components/About.jsx';
 
 
-import alt from './libs/alt';
-import storage from './libs/storage';
-import persist from './libs/persist';
 const logger = require('morgan');
-persist(alt, storage, 'app');
 var bs = require('bootstrap');
 import {Route, IndexRoute} from 'react-router';
 
