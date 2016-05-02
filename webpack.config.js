@@ -88,10 +88,7 @@ plugins: [
 
 if(TARGET === 'build' || TARGET === 'stats') {
   module.exports = merge(common, {
-
-    host: process.env.HOST,
-port: process.env.PORT, 
-
+    
     entry: {
       vendor: Object.keys(pkg.dependencies).filter(function(v) {
         return v !== 'alt-utils';
