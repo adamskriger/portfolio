@@ -16,9 +16,11 @@ if(process.env.NODE_ENV === 'development') {
 /* App Config */
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join('app/build/index.html')));
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(logger('dev'));
 /* Server Initialization */
-app.get('/', (req, res) => res.sendFile('app/build/index.html'));
+app.get('/', (req, res) => res.sendFile('index.html'));
 var port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server initialized on // ${new Date()}`));
+
+//new configs//
