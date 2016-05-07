@@ -1,0 +1,16 @@
+
+
+// New Styles
+
+* {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: blue;
+}
+
+div#app {
+  text-align: center;
+}
+
+.outer {
+  display: inline-block;
+}

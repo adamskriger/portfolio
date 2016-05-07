@@ -1,9 +1,6 @@
 import AltContainer from 'alt-container';
 import React from 'react';
-import Navigation from './Navigation.jsx';
-import Splash from './Splash.jsx'
-import About from './About.jsx'
-import BlogShow from './BlogShow.jsx'
+import Website from './Website'
 
 //firebase
 import Firebase from 'firebase';
@@ -16,14 +13,16 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <div>
-
-        <Navigation />
-        <Splash />
-
-
-      </div>
-
+<div className="outer">
+  <div className="inner"> 
+            <div><Website title={'Popstar'} url={'https://popstar-app.herokuapp.com/'} /></div>
+            <div><Website title={'Prolific Capital'} url={'http://prolific-capital.com/'} /></div>
+            <div><Website title={'ABC Apparel'} url={'https://vpv.herokuapp.com/'} /></div>
+            <div><Website title={'Real Time YouTube'} url={'https://youtube-react-spa.herokuapp.com/'} /></div>
+            <div><Website title={'Plantee App'} url={'45.55.179.238:3000'} /></div>
+            <div><Website title={'The Information Station'} url={'http://adamskriger.github.io/trivia/'} /></div>
+  </div>
+</div>
     );
   }
 

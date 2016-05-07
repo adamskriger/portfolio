@@ -19,7 +19,7 @@ export default class Navigation extends React.Component {
         <span className="icon-bar"></span>
         <span className="icon-bar"></span>
       </button>
-      <Link to="/" className="navbar-brand" >Conscious</Link>
+      <Link to="/" className="navbar-brand" >Dr. Miriam</Link>
     </div>
 
     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
