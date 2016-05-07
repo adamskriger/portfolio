@@ -15,7 +15,7 @@ export default class App extends React.Component {
   render() {
 
     var website = {
-      
+
       fontSize: '1.5rem'
     }
     return (
@@ -23,6 +23,7 @@ export default class App extends React.Component {
   <div className="inner">
 
             <Heading />
+            
             <div style={website}><Website title={'Popstar'} url={'https://popstar-app.herokuapp.com/'} /></div>
             <div style={website}><Website title={'Prolific Capital'} url={'http://prolific-capital.com/'} /></div>
             <div style={website}><Website title={'ABC Apparel'} url={'https://vpv.herokuapp.com/'} /></div>

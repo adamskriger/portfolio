@@ -7,25 +7,41 @@ import Firebase from 'firebase';
 import ReactFire from 'reactfire';
 
 
-export default class App extends React.Component {
+export default class Heading extends React.Component {
 
 
   render() {
 
-    var headline = {
 
-      fontSize: '4rem',
-      fontWeight: '18.7rem',
-      lineHeight: '3.3rem',
-      marginTop: '15rem',
-      marginBottom: '7.5rem'
-    }
 
     return (
       <div>
 
-      <div className="" style={headline}>Simply Advanced Web Development.</div>
+        <div className="containsTitle"><div>Title</div> </div
 
+        <div className="containsSnapshots"><div>Title</div></div>
+
+            <div className="snapshot"><div className="snapshotTitle">Type</div><div className="snapshotButtons">Buttons</div></div>
+
+            <div className="snapshot"><div className="snapshotTitle">Role</div><div className="snapshotButtons">Buttons</div></div>
+
+            <div className="snapshot"><div className="snapshotTitle">Tech</div><div className="snapshotButtons">Buttons</div></div>
+
+
+        </div>
+
+        <div className="projectContents">
+
+        <div className="ProjectImage">
+
+        </div>
+
+          <div className="ProjectStructure">
+
+          </div>
+
+
+        </div>
 
 
       </div>
