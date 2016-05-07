@@ -2,6 +2,7 @@ import AltContainer from 'alt-container';
 import React from 'react';
 import Website from './Website'
 import Heading from './Heading'
+import { Link } from 'react-router';
 
 
 //firebase
@@ -23,8 +24,9 @@ export default class App extends React.Component {
   <div className="inner">
 
             <Heading />
-            
-            <div style={website}><Website title={'Popstar'} url={'https://popstar-app.herokuapp.com/'} /></div>
+
+            <Link to='exhibit'><div style={website}><Website title={'Popstar'} url={'https://popstar-app.herokuapp.com/'} /></div></Link>
+
             <div style={website}><Website title={'Prolific Capital'} url={'http://prolific-capital.com/'} /></div>
             <div style={website}><Website title={'ABC Apparel'} url={'https://vpv.herokuapp.com/'} /></div>
             <div style={website}><Website title={'Real Time YouTube'} url={'https://youtube-react-spa.herokuapp.com/'} /></div>

@@ -1,6 +1,6 @@
 import App from './components/App.jsx'
 import React from 'react';
-import About from './components/About'
+import Exhibit from './components/Exhibit'
 import Blogger from './components/Blogger'
 import BlogShow from './components/BlogShow'
 
@@ -12,7 +12,7 @@ export default (
 <Router>
 <Route path="/" component={App}>
 </Route>
-<Route path="/about" component={About} />
+<Route path="/exhibit" component={Exhibit} />
 <Route path="/blogger" component={Blogger} />
 <Route path="blogshow/:key" component={BlogShow} />
 </Router>
