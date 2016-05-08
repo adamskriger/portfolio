@@ -16,3 +16,8 @@ div#app {
 .outer {
   display: inline-block;
 }
+
+
+.containsTitle {
+  background-color: blue;
+}

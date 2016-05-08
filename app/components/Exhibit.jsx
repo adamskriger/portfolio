@@ -17,47 +17,51 @@ export default class Exhibit extends React.Component {
 
 
     return (
-      <div>
+      <div className="container">
 
-        <div className="containsTitle"><div>{this.props.title}</div> </div>
+        <div>
 
-        <div className="containsSnapshots">
-
-            <div className="snapshot">
-              <div className="snapshotTitle">{this.props.type}</div>
-              <div className="snapshotButtons">{this.props.typeButtons}</div>
-            </div>
-
-            <div className="snapshot">
-              <div className="snapshotTitle">Role</div>
-              <div className="snapshotButtons">{this.props.roleButtons}</div>
-            </div>
-
-            <div className="snapshot">
-              <div className="snapshotTitle">Tech</div>
-              <div className="snapshotButtons">{this.props.techButtons}</div>
-            </div>
-
-            </div>
-
-        <div className="projectContents">
-
-        <div className="projectImage">
-          {this.props.exhibitImage}
-        </div>
-
-          <div className="projectStructure">
-             {this.props.projectHeadline}
-          </div>
-          <div className="projectDescription">
-            {this.props.projectDetails}
+          <div className="containsTitle row">
+            <div className="twelve columns">{this.props.title}</div>
           </div>
 
+          <div className="containsSnapshots">
+
+              <div className="snapshot">
+                <div className="snapshotTitle">{this.props.type}</div>
+                <div className="snapshotButtons">{this.props.typeButtons}</div>
+              </div>
+
+              <div className="snapshot">
+                <div className="snapshotTitle">Role</div>
+                <div className="snapshotButtons">{this.props.roleButtons}</div>
+              </div>
+
+              <div className="snapshot">
+                <div className="snapshotTitle">Tech</div>
+                <div className="snapshotButtons">{this.props.techButtons}</div>
+              </div>
+
+              </div>
+
+          <div className="projectContents">
+
+          <div className="projectImage row">
+              <div className="twelve columns u-max-full-width">{this.props.exhibitImage}</div>
+          </div>
+
+            <div className="projectStructure">
+               {this.props.projectHeadline}
+            </div>
+            <div className="projectDescription">
+              {this.props.projectDetails}
+            </div>
+
+          </div>
+
+
         </div>
-
-
       </div>
-
     );
   }
 

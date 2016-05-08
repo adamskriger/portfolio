@@ -18,7 +18,7 @@ export default class Popstar extends React.Component {
     const typeButtons = <button>WEB APP</button>
     const roleButtons = <button>Full Stack Development</button>
     const techButtons = <button>Ruby-on-Rails</button>
-    const exhibitImage = <img src="https://s3.amazonaws.com/akportfolioimages/Exhibit/popstar.png" alt=""/>
+    const exhibitImage = <img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/popstar.png" alt=""/>
     const projectDetails = <div>Project Details</div>
     return (
 
