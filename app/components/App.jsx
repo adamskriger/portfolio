@@ -25,7 +25,7 @@ export default class App extends React.Component {
 
             <Heading />
 
-            <Link to='exhibit'><div style={website}><Website title={'Popstar'} url={'https://popstar-app.herokuapp.com/'} /></div></Link>
+            <Link to='popstar'><div style={website}><Website title={'Popstar'} url={'https://popstar-app.herokuapp.com/'} /></div></Link>
 
             <div style={website}><Website title={'Prolific Capital'} url={'http://prolific-capital.com/'} /></div>
             <div style={website}><Website title={'ABC Apparel'} url={'https://vpv.herokuapp.com/'} /></div>

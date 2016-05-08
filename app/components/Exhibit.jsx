@@ -19,37 +19,39 @@ export default class Exhibit extends React.Component {
     return (
       <div>
 
-        <div className="containsTitle"><div>Title</div> </div>
+        <div className="containsTitle"><div>{this.props.title}</div> </div>
 
-        <div className="containsSnapshots"><div>Title</div>
+        <div className="containsSnapshots">
 
             <div className="snapshot">
-              <div className="snapshotTitle">Type</div>
-              <div className="snapshotButtons">Buttons</div>
+              <div className="snapshotTitle">{this.props.type}</div>
+              <div className="snapshotButtons">{this.props.typeButtons}</div>
             </div>
 
             <div className="snapshot">
               <div className="snapshotTitle">Role</div>
-              <div className="snapshotButtons">Buttons</div>
+              <div className="snapshotButtons">{this.props.roleButtons}</div>
             </div>
 
             <div className="snapshot">
               <div className="snapshotTitle">Tech</div>
-              <div className="snapshotButtons">Buttons</div>
+              <div className="snapshotButtons">{this.props.techButtons}</div>
             </div>
 
             </div>
 
         <div className="projectContents">
 
-        <div className="ProjectImage">
-
+        <div className="projectImage">
+          {this.props.exhibitImage}
         </div>
 
-          <div className="ProjectStructure">
-
+          <div className="projectStructure">
+             {this.props.projectHeadline}
           </div>
-
+          <div className="projectDescription">
+            {this.props.projectDetails}
+          </div>
 
         </div>
 
