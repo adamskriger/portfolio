@@ -34,12 +34,12 @@ export default class Exhibit extends React.Component {
                 </div>
 
                 <div className="snapshot">
-                  <div className="snapshotTitle">ROLE</div>
+                  <div className="snapshotTitle">{this.props.role}</div>
                   <div className="snapshotButtons">{this.props.roleButtons}</div>
                 </div>
 
                 <div className="snapshot">
-                  <div className="snapshotTitle">TECH</div>
+                  <div className="snapshotTitle">{this.props.tech}</div>
                   <div className="snapshotButtons">{this.props.techButtons}</div>
                 </div>
               </div>

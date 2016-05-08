@@ -24,7 +24,7 @@ export default class App extends React.Component {
     return (
       <div>
 
-      <div className="" style={headline}>Simply Advanced Web Development.</div>
+      <div className="" style={headline}>Simple. Advanced Web Development.</div>
 
 
 
