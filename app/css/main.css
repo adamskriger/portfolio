@@ -65,3 +65,25 @@ div#app {
 .projectImage {
   margin-bottom: 6rem;
 }
+
+.fixed {
+	position: fixed;
+	top: 0;
+  right: 5rem;
+	height: 6rem;
+	z-index: 1;
+  text-align: right;
+  background-color: white;
+
+
+}
+
+.containsReferences {
+  padding-right: 3rem;
+  font-size: .7rem;
+}
+
+.reference {
+  display: inline-block;
+  margin: 2rem;
+}

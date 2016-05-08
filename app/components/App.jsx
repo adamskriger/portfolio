@@ -4,6 +4,7 @@ import Website from './Website'
 import Heading from './Heading'
 import { Link } from 'react-router';
 import Exhibit from './Exhibit'
+import Nav from './Nav'
 
 
 
@@ -26,6 +27,8 @@ export default class App extends React.Component {
 <div className="container">
     <div className="outer">
       <div className="inner">
+
+                <div className="fixed twelve columns"> <Nav /> </div>
 
                 <Heading />
 
