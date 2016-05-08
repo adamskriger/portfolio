@@ -17,10 +17,14 @@ div#app {
   display: inline-block;
 }
 
+.frontButtons {
+  margin-bottom: 6rem;
+}
+
 .frontImage {
   width: 60rem;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: inline-block;
 }
 .containsTitle {

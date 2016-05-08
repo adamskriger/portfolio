@@ -16,12 +16,6 @@ export default class App extends React.Component {
 
 
   render() {
-    const typeButtons = <button>WEB APP</button>
-    const roleButtons = <button>Full Stack Development</button>
-    const techButtons = <div><button>Ruby-on-Rails</button> <button>Amazon Web Services</button> <button>Secure User Authorization</button></div>
-    const exhibitImage = <img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/popstar.png" alt=""/>
-    const projectHeadline = <div className= "row"><a href="https://popstar-app.herokuapp.com/">Visit Site</a></div>
-    const projectDetails = <div className= "row">Project Details</div>
 
 
     var website = {
@@ -34,6 +28,10 @@ export default class App extends React.Component {
       <div className="inner">
 
                 <Heading />
+
+                <div className="frontButtons twelve columns ">
+                  <div><button>React.js</button><button>JavaScript</button><button>Ruby-on-Rails</button> <button>HTML5</button><button>CSS3</button><button>JQuery</button><button>Node.js</button><button>SQL</button> <button>Amazon Web Services</button><button>Git</button> </div>
+                </div>
 
                 <div>
 
