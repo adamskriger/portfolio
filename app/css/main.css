@@ -43,13 +43,14 @@ div#app {
 
 .projectStructure {
   height: 10rem;
-  text-align: left;
+  text-align: center;
 
 
 }
 
 .projectDetails {
-  text-align: left;
+  text-align: center;
+  visibility: hidden;
 }
 
 .projectImage {
