@@ -19,5 +19,39 @@ div#app {
 
 
 .containsTitle {
-  background-color: blue;
+  height: 10rem;
+  text-align: left;
+}
+
+.title {
+  margin-top: 6rem;
+  font-size: 2rem;
+
+}
+
+.containsSnapshots {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  text-align: left;
+
+}
+.snapshot {
+  float: left;
+  display: inline-block;
+  padding-right: 4rem;
+}
+
+.projectStructure {
+  height: 10rem;
+  text-align: left;
+
+
+}
+
+.projectDetails {
+  text-align: left;
+}
+
+.projectImage {
+  margin-bottom: 6rem;
 }
