@@ -13,7 +13,7 @@ import {Route, IndexRoute} from 'react-router';
 import ReactBoostrap from 'react-bootstrap'
 
 ReactDOM.render(
-  <Router history={browserHistory} routes={routes} >
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory} routes={routes} >
 
     <Route path="/" component={App} />
 
