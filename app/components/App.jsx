@@ -37,16 +37,22 @@ export default class App extends React.Component {
 
                 <div>
 
-                <Link to='popstar'><Exhibit exhibitImage={exhibitImage} /></Link>
+                <div className="frontImage"><Link to='popstar'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/popstar.png" alt=""/></Link></div>
+
+
+
+                <div className="frontImage"><Link to='prolificcapital'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/prolificcapital.png" alt=""/></Link></div>
+
+                <div className="frontImage"><Link to='abcapparel'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/abcapparel.png" alt=""/></Link></div>
+
+              <div className="frontImage"><Link to='youtube'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/youtube.png" alt=""/></Link></div>
+
+                <div className="frontImage"><Link to='plantee'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/plantee.png" alt=""/></Link></div>
+
+                <div className="frontImage"><Link to='theinformationstation'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/informationstation.png" alt=""/></Link></div>
+
                 </div>
 
-                <Link to='popstar'><div style={website}><Website title={'Popstar'} url={'https://popstar-app.herokuapp.com/'} /></div></Link>
-
-                <div style={website}><Website title={'Prolific Capital'} url={'http://prolific-capital.com/'} /></div>
-                <div style={website}><Website title={'ABC Apparel'} url={'https://vpv.herokuapp.com/'} /></div>
-                <div style={website}><Website title={'Real Time YouTube'} url={'https://youtube-react-spa.herokuapp.com/'} /></div>
-                <div style={website}><Website title={'Plantee App'} url={'45.55.179.238:3000'} /></div>
-                <div style={website}><Website title={'The Information Station'} url={'http://adamskriger.github.io/trivia/'} /></div>
       </div>
     </div>
 </div>

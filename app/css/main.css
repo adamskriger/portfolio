@@ -17,7 +17,12 @@ div#app {
   display: inline-block;
 }
 
-
+.frontImage {
+  width: 60rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  display: inline-block;
+}
 .containsTitle {
   height: 10rem;
   text-align: left;
