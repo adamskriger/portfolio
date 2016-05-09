@@ -14,7 +14,7 @@ export default class App extends React.Component {
 
     var headline = {
 
-      fontSize: '4rem',
+      fontSize: '2rem',
       fontWeight: '18.7rem',
       lineHeight: '3.3rem',
       marginTop: '15rem',
@@ -24,7 +24,7 @@ export default class App extends React.Component {
     return (
       <div>
 
-      <div className="" style={headline}>Full Stack. Full Service.</div>
+      <div className="" style={headline}>I am a full stack web developer with a passion for launching, rejuvenating and propelling brands. My goal is to create lasting and meaningful relationships between your brand and your audience through smart thinking and thoughtful design.</div>
 
 
 

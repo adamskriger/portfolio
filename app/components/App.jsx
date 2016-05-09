@@ -25,38 +25,44 @@ export default class App extends React.Component {
     }
     return (
 <div className="container">
-    <div className="outer">
-      <div className="inner">
-      
-                <div className="fixed twelve columns"> <Nav /> </div>
+        <div className="row">
+                <div className="fixed twelve columns">
+
+                 <Nav />
+
+                 </div>
+        </div>
+        <div className="row">
 
                 <Heading />
+         </div>
+
+         <div className="row">
+
 
                 <div className="frontButtons twelve columns ">
                   <div><button>React.js</button><button>JavaScript</button><button>Ruby-on-Rails</button> <button>HTML5</button><button>CSS3</button><button>JQuery</button><button>Node.js</button><button>SQL</button> <button>Amazon Web Services</button><button>Git</button> </div>
                 </div>
+        </div>
+                <div className="row">
 
-                <div>
-
-                <div className="frontImage"><Link to='popstar'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/popstar.png" alt=""/></Link></div>
+                <div className="frontImage twelve columns"><Link to='popstar'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/popstar.png" alt=""/></Link></div>
 
 
 
-                <div className="frontImage"><Link to='prolificcapital'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/prolificcapital.png" alt=""/></Link></div>
+                <div className="frontImage twelve columns"><Link to='prolificcapital'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/prolificcapital.png" alt=""/></Link></div>
 
-                <div className="frontImage"><Link to='abcapparel'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/abcapparel.png" alt=""/></Link></div>
+                <div className="frontImage twelve columns"><Link to='abcapparel'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/abcapparel.png" alt=""/></Link></div>
 
-              <div className="frontImage"><Link to='youtube'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/youtube.png" alt=""/></Link></div>
+              <div className="frontImage twelve columns"><Link to='youtube'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/youtube.png" alt=""/></Link></div>
 
-                <div className="frontImage"><Link to='plantee'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/plantee.png" alt=""/></Link></div>
+                <div className="frontImage twelve columns"><Link to='plantee'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/plantee.png" alt=""/></Link></div>
 
-                <div className="frontImage"><Link to='theinformationstation'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/informationstation.png" alt=""/></Link></div>
+                <div className="frontImage twelve columns"><Link to='theinformationstation'><img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/informationstation.png" alt=""/></Link></div>
 
                 </div>
 
       </div>
-    </div>
-</div>
     );
   }
 
