@@ -27,7 +27,7 @@ export default class App extends React.Component {
 <div className="container">
     <div className="outer">
       <div className="inner">
-
+      
                 <div className="fixed twelve columns"> <Nav /> </div>
 
                 <Heading />

@@ -22,15 +22,15 @@ export default class Nav extends React.Component {
           <div className="row">
 
             <div className="reference">
-              <div className="actualReference">GITHUB</div>
+              <div className="actualReference"><a href="https://github.com/adamskriger">GITHUB</a></div>
             </div>
 
             <div className="reference">
-              <div className="actualReference">LINKEDIN</div>
+              <div className="actualReference"><a href="https://www.linkedin.com/in/adamkriger">LINKEDIN</a></div>
             </div>
 
             <div className="reference">
-              <div className="actualReference">EMAIL</div>
+              <div className="actualReference"><a href="mailto:adamkriger@gmail.com">EMAIL</a></div>
             </div>
           </div>
       </div>
