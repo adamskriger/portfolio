@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const path       = require('path');
 const app        = express();
 const ReactDOM = require('react-dom')
+const favicon = require('serve-favicon');
 
 
 if(process.env.NODE_ENV === 'development') {
@@ -20,6 +21,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(logger('dev'));
+app.use(favicon('https://s3.amazonaws.com/akportfolioimages/Adam_Kriger_Black_White.png'));
+
 /* Server Initialization */
 app.get('/', (req, res) => res.sendFile('index.html'));
 var port = process.env.PORT || 3000;
