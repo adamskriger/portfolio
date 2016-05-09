@@ -7,7 +7,7 @@ const path       = require('path');
 const app        = express();
 const ReactDOM = require('react-dom')
 const favicon = require('serve-favicon');
-app.use(favicon('favicon.ico'));
+app.use(favicon(__dirname + '/favicon.ico'));
 
 
 if(process.env.NODE_ENV === 'development') {
