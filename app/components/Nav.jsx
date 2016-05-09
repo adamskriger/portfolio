@@ -18,7 +18,7 @@ export default class Nav extends React.Component {
 
     return (
 
-      <div className="containsReferences">
+      <div className="fixed twelve columns containsReferences">
           <div className="row">
 
             <div className="reference">

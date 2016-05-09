@@ -5,10 +5,9 @@ const logger     = require('morgan');
 const bodyParser = require('body-parser');
 const path       = require('path');
 const app        = express();
-app.use(favicon(__dirname + '/public/favicon.ico'));
-
 const ReactDOM = require('react-dom')
 const favicon = require('serve-favicon');
+app.use(favicon('favicon.ico'));
 
 
 if(process.env.NODE_ENV === 'development') {
@@ -24,7 +23,6 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(logger('dev'));
-app.use(favicon(__dirname + '/public/favicon.ico'));
 
 /* Server Initialization */
 app.get('/', (req, res) => res.sendFile('index.html'));

@@ -69,12 +69,11 @@ div#app {
 .fixed {
 	position: fixed;
 	top: 0;
-  right: 5rem;
 	height: 6rem;
 	z-index: 1;
   text-align: right;
   background-color: white;
-
+  right:0;
 
 }
 

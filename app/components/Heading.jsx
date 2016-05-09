@@ -24,7 +24,7 @@ export default class App extends React.Component {
     return (
       <div>
 
-      <div className="" style={headline}>I am a full stack web developer with a passion for launching, rejuvenating and propelling brands. My goal is to create lasting and meaningful relationships between your brand and your audience through smart thinking and thoughtful design.</div>
+      <div className="" style={headline}><strong>Adam Kriger</strong> is a full stack web developer with a passion for launching, rejuvenating and propelling brands. His goal is to create <strong>lasting and meaningful relationships</strong> between your brand and your audience <strong>through smart thinking and thoughtful design</strong>.</div>
 
 
 
