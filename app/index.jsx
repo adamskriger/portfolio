@@ -1,5 +1,5 @@
-import './css/main.css';
-import './css/skeleton.css';
+import './main.css';
+import './skeleton.css';
 
 
 import { Router, browserHistory } from 'react-router';

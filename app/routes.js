@@ -9,8 +9,6 @@ import Plantee from './components/Plantee'
 import TheInformationStation from './components/TheInformationStation'
 
 
-import Blogger from './components/Blogger'
-import BlogShow from './components/BlogShow'
 
 import {Router, Route, IndexRoute} from 'react-router';
 
@@ -26,12 +24,6 @@ export default (
 <Route path="/youtube" component={RealTimeYouTube} />
 <Route path="/plantee" component={Plantee} />
 <Route path="/theinformationstation" component={TheInformationStation} />
-
-
-
-
-<Route path="/blogger" component={Blogger} />
-<Route path="blogshow/:key" component={BlogShow} />
 </Router>
 
 );

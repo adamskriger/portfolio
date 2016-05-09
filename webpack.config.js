@@ -25,7 +25,7 @@ const common = {
   // '' is needed to allow imports without an extension
   // note the .'s before the extension as it will fail to load without them
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.json']
   },
   output: {
     path: PATHS.build,
@@ -39,6 +39,7 @@ const common = {
         loaders: ['style', 'css'],
         //Include accepts either a path or an array of paths
         include: PATHS.app
+
       },
       //set up JSX. This accepts js too thanks to RegExp
       {
@@ -47,7 +48,7 @@ const common = {
       //It uses default OS directory by default. If you need something more custom,
       //pass a path to it. ie: babel?cacheDirectory=<path>
       loaders: [
-        'babel?cacheDirectory,presets[]=es2015,presets[]=survivejs-kanban'
+        'babel?cacheDirectory,presets[]=es2015'
     ],
       //parse only app files Without this it will go thru the entire project.
       //beside being slow this will likely result in an error
@@ -116,7 +117,6 @@ if(TARGET === 'build' || TARGET === 'stats') {
       ]
     },
     plugins: [
-      new CleanPlugin([PATHS.build]),
       // Output extracted CSS to a file
       new ExtractTextPlugin('[name].[chunkhash].css'),
       // Extract vendor and manifest files
