@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const path       = require('path');
 const app        = express();
 const ReactDOM = require('react-dom')
+var favicon = require('serve-favicon');
 
 
 if(process.env.NODE_ENV === 'development') {
@@ -19,6 +20,7 @@ if(process.env.NODE_ENV === 'development') {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'build')));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.use(logger('dev'));
 
