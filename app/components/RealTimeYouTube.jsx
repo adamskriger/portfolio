@@ -20,7 +20,7 @@ export default class RealTimeYouTube extends React.Component {
     const roleButtons = <button>Full Stack Development</button>
     const techButtons = <div><button>REACT</button> <button>YouTube API</button> <button>HTML5</button><button>WEBPACK</button></div>
     const exhibitImage = <img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/youtube.png" alt=""/>
-    const projectHeadline = <div className= "row"><a href="https://youtube-react-spa.herokuapp.com/">Visit Site</a></div>
+    const projectHeadline = <div className= "row"><a href="https://youtube-react-spa.herokuapp.com/" target="_blank">Visit Site</a></div>
     const projectDetails = <div className= "row">Project Details</div>
 
     return (

@@ -20,7 +20,7 @@ export default class TheInformationStation extends React.Component {
     const roleButtons = <button>Full Stack Development</button>
     const techButtons = <div><button>JAVASCRIPT</button> <button>HTML5</button> <button>CSS3</button></div>
     const exhibitImage = <img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/informationstation.png" alt=""/>
-    const projectHeadline = <div className= "row"><a href="http://adamskriger.github.io/trivia/">Visit Site</a></div>
+    const projectHeadline = <div className= "row"><a href="http://adamskriger.github.io/trivia/" target="_blank">Visit Site</a></div>
     const projectDetails = <div className= "row">Project Details</div>
 
     return (

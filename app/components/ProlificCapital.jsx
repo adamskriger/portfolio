@@ -20,7 +20,7 @@ export default class Popstar extends React.Component {
     const roleButtons = <button>Full Stack Development</button>
     const techButtons = <div><button>HTML5</button> <button>CSS3</button> <button>Wordpress</button></div>
     const exhibitImage = <img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/prolificcapital.png" alt=""/>
-    const projectHeadline = <div className= "row"><a href="http://prolific-capital.com/">Visit Site</a></div>
+    const projectHeadline = <div className= "row"><a href="http://prolific-capital.com/" target="_blank">Visit Site</a></div>
     const projectDetails = <div className= "row">Project Details</div>
 
     return (

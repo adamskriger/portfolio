@@ -20,7 +20,7 @@ export default class Plantee extends React.Component {
     const roleButtons = <button>Full Stack Development</button>
     const techButtons = <div><button>REACT</button> <button>TWILIO API</button> <button>HTML5</button><button>CSS3</button></div>
     const exhibitImage = <img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/plantee.png" alt=""/>
-    const projectHeadline = <div className= "row"><a href="http://45.55.179.238:3000">Visit Site</a></div>
+    const projectHeadline = <div className= "row"><a href="http://45.55.179.238:3000" target="_blank">Visit Site</a></div>
     const projectDetails = <div className= "row">Project Details</div>
 
     return (
