@@ -16,7 +16,7 @@ export default class Abcapparel extends React.Component {
   render() {
 
 
-    const typeButtons = <button>TYPE</button>
+    const typeButtons = <button>WEB APP</button>
     const roleButtons = <div><button>DESIGN</button><button>FRONT END DEVELOPMENT </button></div>
     const techButtons = <div><button>HTML5</button> <button>CSS3</button> <button>JQUERY</button><button>NODE.JS</button></div>
     const exhibitImage = <img className="twelve columns u-max-full-width" src="https://s3.amazonaws.com/akportfolioimages/Exhibit/abcapparel.png" alt=""/>
